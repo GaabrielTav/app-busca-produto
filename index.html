@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App CRUD Estilizado</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="text-white text-center py-4 shadow-sm">
+    <h1 class="mb-0">App CRUD Simples</h1>
+  </header>
+
+  <main class="container mt-5">
+    <!-- Formulário para adicionar itens -->
+    <section id="form-section" class="mb-4">
+      <h2 class="h4 text-secondary">Adicionar Item</h2>
+      <form id="item-form" class="d-flex gap-2">
+        <input 
+          type="text" 
+          id="item-name" 
+          class="form-control rounded shadow-sm" 
+          placeholder="Nome do item" 
+          required 
+        />
+        <button type="submit" class="btn btn-success rounded shadow-sm">Adicionar</button>
+      </form>
+    </section>
+
+    <!-- Barra de pesquisa -->
+    <section id="search-section" class="mb-4">
+      <input 
+        type="text" 
+        id="search-bar" 
+        class="form-control rounded shadow-sm" 
+        placeholder="Pesquisar..." 
+      />
+    </section>
+
+    <!-- Botão para limpar tudo -->
+    <section id="clear-section" class="mb-4">
+      <button 
+        id="clear-all" 
+        class="btn btn-danger rounded shadow-sm"
+      >
+        Limpar Tudo
+      </button>
+    </section>
+
+    <!-- Tabela de itens -->
+    <section id="table-section">
+      <table class="table table-striped table-hover rounded shadow-sm">
+        <thead class="table-success">
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="item-table-body">
+          <!-- Itens serão adicionados dinamicamente -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

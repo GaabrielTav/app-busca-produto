@@ -1,0 +1,33 @@
+/* Header personalizado */
+header {
+  border-radius: 0 0 10px 10px;
+  background-color: #113857;
+}
+
+/* Botões com hover */
+button {
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Input com foco */
+input:focus {
+  border-color: #4c82af;
+  box-shadow: 0 0 5px rgba(72, 122, 180, 0.5);
+  outline: none;
+}
+
+/* Melhor espaçamento na tabela */
+table {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+thead {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
