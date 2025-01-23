@@ -3,66 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>App CRUD Estilizado</title>
+  <title>Filtro Avançado</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
 </head>
 <body>
-  <header class="text-white text-center py-4 shadow-sm">
-    <h1 class="mb-0">App CRUD Simples</h1>
+  <header class="bg-success text-white text-center py-4">
+    <h1>MiamoreLoveU</h1>
   </header>
 
   <main class="container mt-5">
     <!-- Formulário para adicionar itens -->
     <section id="form-section" class="mb-4">
-      <h2 class="h4 text-secondary">Adicionar Item</h2>
-      <form id="item-form" class="d-flex gap-2">
-        <input 
-          type="text" 
-          id="item-name" 
-          class="form-control rounded shadow-sm" 
-          placeholder="Nome do item" 
-          required 
-        />
-        <button type="submit" class="btn btn-success rounded shadow-sm">Adicionar</button>
+      <h2 class="h4">Adicionar Item</h2>
+      <form id="item-form" class="row g-3">
+        <div class="col-md-4">
+          <input type="text" id="item-name" class="form-control" placeholder="Nome do item" required />
+        </div>
+        <div class="col-md-2">
+          <input type="number" id="item-quantity" class="form-control" placeholder="Quantidade" required />
+        </div>
+        <div class="col-md-3">
+          <input type="number" id="item-value" class="form-control" placeholder="Valor de Compra (R$)" required />
+        </div>
+        <div class="col-md-2">
+          <input type="number" id="item-profit" class="form-control" placeholder="Lucro (%)" required />
+        </div>
+        <div class="col-md-1">
+          <button type="submit" class="btn btn-primary w-100">Adicionar</button>
+        </div>
       </form>
     </section>
 
-    <!-- Barra de pesquisa -->
-    <section id="search-section" class="mb-4">
-      <input 
-        type="text" 
-        id="search-bar" 
-        class="form-control rounded shadow-sm" 
-        placeholder="Pesquisar..." 
-      />
-    </section>
-
-    <!-- Botão para limpar tudo -->
-    <section id="clear-section" class="mb-4">
-      <button 
-        id="clear-all" 
-        class="btn btn-danger rounded shadow-sm"
-      >
-        Limpar Tudo
-      </button>
+    <!-- Filtros -->
+    <section id="filter-section" class="mb-4">
+      <h2 class="h4">Filtros</h2>
+      <form id="filter-form" class="row g-3">
+        <div class="col-md-4">
+          <input type="number" id="filter-quantity" class="form-control" placeholder="Quantidade mínima" />
+        </div>
+        <div class="col-md-3">
+          <input type="number" id="filter-value" class="form-control" placeholder="Valor de compra mínimo (R$)" />
+        </div>
+        <div class="col-md-3">
+          <input type="number" id="filter-profit" class="form-control" placeholder="Lucro mínimo (%)" />
+        </div>
+        <div class="col-md-2">
+          <button type="button" id="apply-filters" class="btn btn-success w-100">Filtrar</button>
+        </div>
+      </form>
     </section>
 
     <!-- Tabela de itens -->
     <section id="table-section">
-      <table class="table table-striped table-hover rounded shadow-sm">
+      <table class="table table-striped table-hover">
         <thead class="table-success">
           <tr>
             <th>ID</th>
             <th>Nome</th>
-            <th>Ações</th>
+            <th>Quantidade</th>
+            <th>Valor de Compra (R$)</th>
+            <th>Lucro (%)</th>
+            <th>Preço de Venda (R$)</th>
           </tr>
         </thead>
-        <tbody id="item-table-body">
-          <!-- Itens serão adicionados dinamicamente -->
-        </tbody>
+        <tbody id="item-table-body"> <!-- Itens serão adicionados dinamicamente --></tbody>
       </table>
     </section>
+
+    <section id="clear-section" class="mb-4">
+     <button id="clear-all" class="btn btn-danger mt-3">Limpar Tudo</button>
+    </section>
+
   </main>
 
   <script src="script.js"></script>
