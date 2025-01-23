@@ -75,7 +75,7 @@ function editItem(index) {
 
   // Alterar o botão para "Salvar Alterações"
   const submitButton = document.querySelector('#item-form button[type="submit"]');
-  submitButton.textContent = 'Salvar Alterações';
+  submitButton.textContent = 'Salvar';
   submitButton.classList.remove('btn-primary');
   submitButton.classList.add('btn-success');
 
